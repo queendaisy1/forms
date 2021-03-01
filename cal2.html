@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>calculator 2</title>
+	<style type="text/css">
+		body {
+			background-color: black;
+			margin: 0;
+		}
+		form {
+			border: 5px solid gold;
+			width: 430px;
+			height: 615px;
+			background-color: rgba(0, 0, 0, 0.9);
+
+		}
+		input {
+			color: black;
+		}
+		.field {
+			background-color: gold;
+			color: firebrick;
+			height: 50px;
+			font-size: 15px;
+			border: 3px solid firebrick;
+		}
+		.coolTitle {
+			text-align: center;
+			font-family: 'Oswald', Helvetica, san-serif;
+			font-size: 40px;
+			transform: skewX(5deg);
+			letter-spacing: 4px;
+			word-spacing: -8px;
+			color: gold;
+			text-transform: uppercase;
+			text-shadow: 
+			-1px -1px 0 firebrick,
+			-2px -2px 0 firebrick,
+			-3px -3px 0 firebrick,
+			-4px -4px 0 firebrick,
+			-5px -5px 0 firebrick,
+			-6px -6px 0 firebrick,
+			-7px -7px 0 firebrick,
+			-8px -8px 0 firebrick,
+			-30px 20px 40px dimgrey;
+			font-weight: bold;
+		}
+		.tab {
+			border: 1px solid gold;
+		}
+		.button, .button1, .button2 {
+			background-color: gold;
+			border: none;
+			color: firebrick;
+			padding: 32px 25px;
+			display: inline-block;
+			margin: 4px 2px;
+			cursor: pointer;
+			border-radius: 8px;
+			transition-duration: 0.4s;
+			width: 100%;
+			overflow: hidden;
+			border: 3px solid firebrick;
+			font-weight: bold;
+		}
+		.button:hover {
+			background-color: white;
+			color: firebrick;
+			transform: scale(1.1);
+		}
+		.button2:hover {
+			background-color: white;
+			color: firebrick;
+			transform: scale(1.1);
+		}
+		.button1:hover {
+			background-color: white;
+			color: firebrick;
+			transform: scale(1.1);
+		}
+		.button1 {
+			font-weight: bolder;
+		}
+
+	</style>
+</head>
+<body >
+	<center>
+	<form name="calculator"><br><br>
+		<div class=coolTitle>Calculator</div>
+	<br>
+<table style="background-color: rgba(256, 10, 45, 0.8);">
+		<b>
+			<table class="tab" width="400" height=500 cellpadding="1" cellspacing="5">
+			<tr>
+		<td colspan="3" align="middle">
+		<input type="textfield" class="field" name="ans" size="24" maxlength="9" width="100%">
+		</td>
+				
+		<td><input type="reset" name="btnclear" class="button" value=" C "></td>
+		<td><input type="button" name="btnclearEntry" class="button2" value=" CE " onclick="document.calculator.ans.value=document.calculator.ans.value.substring(0,document.calculator.ans.value.length*1-1)"></td>
+			</tr>
+			<tr>
+		<td><input type="button" class="button" value="7" onclick="document.calculator.ans.value+='7'"></td>
+		<td><input type="button" class="button" value="8" onclick="document.calculator.ans.value+='8'"></td>
+		<td><input type="button" class="button" value="9" onclick="document.calculator.ans.value+='9'"></td>
+		<td><input type="button" class="button" value="*" onclick="document.calculator.ans.value+='*'"></td>
+		<td><input type="button" class="button" value="/" onclick="document.calculator.ans.value+='/'"></td>
+			</tr>
+			<tr>
+		<td><input type="button" class="button" value="4" onclick="document.calculator.ans.value+='4'"></td>
+		<td><input type="button" class="button" value="5" onclick="document.calculator.ans.value+='5'"></td>
+		<td><input type="button" class="button" value="6" onclick="document.calculator.ans.value+='6'"></td>
+		<td><input type="button" class="button" value="-" onclick="document.calculator.ans.value+='-'"></td>
+		<td><input type="button" class="button" value="%" onclick="document.calculator.ans.value+='%'"></td>
+			</tr>
+			<tr>
+		<td><input type="button" class="button" value="1" onclick="document.calculator.ans.value+='1'"></td>
+		<td><input type="button" class="button" value="2" onclick="document.calculator.ans.value+='2'"></td>
+		<td><input type="button" class="button" value="3" onclick="document.calculator.ans.value+='3'"></td>
+		<td><input type="button" class="button" value="+" onclick="document.calculator.ans.value+='+'"></td>
+		<td><input type="button" class="button" value="+/-" onclick="document.calculator.ans.value+='+/-'"></td>
+
+				
+			</tr>
+			<tr>
+		<td><input type="button" class="button" value="0" onclick="document.calculator.ans.value+='0'"></td>
+		<td><input type="button" class="button" value="00" onclick="document.calculator.ans.value+='00'"></td>
+		<td><b><input type="button" class="button1" value="." onclick="document.calculator.ans.value+='.'"></b></td>
+		<td colspan="2"><input type="button" class="button" value="=" onclick="document.calculator.ans.value=eval(document.calculator.ans.value)"></td>
+			
+				
+				
+			</tr>
+		</table>
+		</b>
+	</table>
+</form>
+</center>
+	</body>
+</html>
